@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+bool search(int arr[],int n,int key)
+{
+    for(int i=0;i<n;i++)
+    {
+        if(key==arr[i])
+        {
+        cout<<"at postion "<<i<<endl;
+        return 1;
+        }
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+
+    int arr[20];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    int found=search(arr,n,5);
+    if(found)
+    {
+        cout<<"element found"<<endl;
+    }
+    else
+    {
+        cout<<"element not found"<<endl;
+    }
+    return 0;
+}
